@@ -1,0 +1,10 @@
+.thumbnails-container{
+    display: inline-flex;    
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 128px;
+    height: 128px;
+}

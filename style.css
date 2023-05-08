@@ -1,3 +1,8 @@
+.webapp {
+    display: flexbox;
+    text-align: center;
+}
+
 .thumbnails-container{
     display: inline-flex;    
     justify-content: center;

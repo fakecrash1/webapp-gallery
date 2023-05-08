@@ -1,14 +1,15 @@
 .webapp {
-    display: flexbox;
+    display: block;
     text-align: center;
 }
 
 .gallery-container {
     display: inline-block;
+    margin: auto;
 }
 
-.photo {
-    display: flex;
+#photo {
+    display: inline-block;
     width: auto;
     height: auto;
 }

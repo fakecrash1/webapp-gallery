@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.main-image {
+    width: auto;
+    height: auto;
+}
+
 .thumbnails-container{
     display: inline-flex;    
     justify-content: center;

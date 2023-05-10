@@ -14,22 +14,22 @@
 
 #left-arrow {
     position: absolute;
-    //top: 50%;
     left: -2%;
-    height: 650px;
+    height: 100%;
+    width: 100px;
 }
 
 #right-arrow {
     position: absolute;
-    //top: 50%;
     right: -2%;
-    height: 650px;
+    height: 100%;
+    width: 100px;
     transform: translateY(-50%);
     transform: scaleX(-1);
 }
 
 #photo {
-    display: inline-block;
+    /*display: inline-block;*/
     width: auto;
     height: auto;
 }
@@ -41,6 +41,6 @@
 }
 
 .thumbnail {
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
 }

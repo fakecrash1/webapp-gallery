@@ -8,6 +8,26 @@
     margin: auto;
 }
 
+.main-image {
+    position: relative;
+}
+
+#left-arrow {
+    position: absolute;
+    //top: 50%;
+    left: -2%;
+    height: 650px;
+}
+
+#right-arrow {
+    position: absolute;
+    //top: 50%;
+    right: -2%;
+    height: 650px;
+    transform: translateY(-50%);
+    transform: scaleX(-1);
+}
+
 #photo {
     display: inline-block;
     width: auto;

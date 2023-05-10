@@ -34,6 +34,12 @@
     height: auto;
 }
 
+.titles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .thumbnails-container{
     display: inline-flex;    
     justify-content: center;

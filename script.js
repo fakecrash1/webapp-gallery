@@ -1,4 +1,4 @@
-
+//Making an array for images with: src, title, description
 let imagesData = [
     {
         photo: "images/AdobeStock_01.jpeg",
@@ -42,16 +42,20 @@ let imagesData = [
     }
 ];
 
+//photo *_01 as "0" -> Loading first image as main image
 let currentPhoto = 0;
 
 function loadPhoto(photoNumber) {
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-description').text(imagesData[photoNumber].description);
+    $('.thumbnail').removeClass('active');
+    $(`.thumbnail[data-number="${photoNumber}"]`).addClass('active');
 }
 
 loadPhoto(currentPhoto);
 
+//Button functions
 $('#right-arrow').click(() => {
     currentPhoto++;
     if (currentPhoto >= imagesData.length) {
@@ -67,3 +71,28 @@ $('#left-arrow').click(() => {
     }
     loadPhoto(currentPhoto);
 });
+
+//Create thumbnails with [.forEach] method
+function createThumbnails() {
+    imagesData.forEach((imageData, index) => {
+        const thumbnail = $('<img>', {
+            class: 'thumbnail',
+            src: imageData.photo,
+            alt: `Thumbnail ${index + 1}`,
+            'data-number': index
+        });
+
+        $('.thumbnails-container').append(thumbnail);
+    });
+}
+
+createThumbnails();
+
+//Create event handler for thumbnails
+function handleThumbnailClick(event) {
+    const thumbnailNumber = $(event.target).attr('data-number');
+    currentPhoto = parseInt(thumbnailNumber);
+    loadPhoto(currentPhoto);
+}
+
+$('.thumbnail').on('click', handleThumbnailClick);

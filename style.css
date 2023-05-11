@@ -63,3 +63,7 @@ body {
     width: 100px;
     height: 100px;
 }
+
+.thumbnail.active {
+    border: 30px solid #fff;
+}

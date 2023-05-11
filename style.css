@@ -1,6 +1,7 @@
 .webapp {
     display: block;
     text-align: center;
+    margin: 2.5%;
 }
 
 .gallery-container {
@@ -14,14 +15,14 @@
 
 #left-arrow {
     position: absolute;
-    left: -2%;
+    left: -10%;
     height: 100%;
     width: 100px;
 }
 
 #right-arrow {
     position: absolute;
-    right: -2%;
+    right: -10%;
     height: 100%;
     width: 100px;
     transform: translateY(-50%);
@@ -35,9 +36,17 @@
 }
 
 .titles {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: block;
+    justify-content: left;
+}
+
+#ontop {
+    position: absolute;
+    background: black;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    opacity: 0.7;
 }
 
 .thumbnails-container{

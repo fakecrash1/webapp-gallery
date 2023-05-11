@@ -82,18 +82,20 @@ function createThumbnails() {
             'data-number': index
         });
 
-        //Create event handler for thumbnails
-        function handleThumbnailClick(event) {
+
+        // Add event handler to the current thumbnail
+        thumbnail.on('click', (event) => {
             const thumbnailNumber = $(event.target).attr('data-number');
             currentPhoto = parseInt(thumbnailNumber);
             loadPhoto(currentPhoto);
-        }
-
-        // Add event handler to the current thumbnail
-        thumbnail.on('click', handleThumbnailClick);
+        });
 
         $('.thumbnails-container').append(thumbnail);
     });
+
+    // Apply the 'active' class to the first thumbnail initially
+    $('.thumbnail[data-number="0"]').addClass('active');
 }
+
 
 createThumbnails();

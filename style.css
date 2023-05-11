@@ -65,5 +65,5 @@ body {
 }
 
 .thumbnail.active {
-    border: 30px solid #fff;
+    border: 5px solid #fff;
 }

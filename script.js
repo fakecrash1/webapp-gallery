@@ -82,17 +82,18 @@ function createThumbnails() {
             'data-number': index
         });
 
+        //Create event handler for thumbnails
+        function handleThumbnailClick(event) {
+            const thumbnailNumber = $(event.target).attr('data-number');
+            currentPhoto = parseInt(thumbnailNumber);
+            loadPhoto(currentPhoto);
+        }
+
+        // Add event handler to the current thumbnail
+        thumbnail.on('click', handleThumbnailClick);
+
         $('.thumbnails-container').append(thumbnail);
     });
 }
 
 createThumbnails();
-
-//Create event handler for thumbnails
-function handleThumbnailClick(event) {
-    const thumbnailNumber = $(event.target).attr('data-number');
-    currentPhoto = parseInt(thumbnailNumber);
-    loadPhoto(currentPhoto);
-}
-
-$('.thumbnail').on('click', handleThumbnailClick);

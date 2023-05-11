@@ -65,6 +65,28 @@ body {
     margin: 5px;
 }
 
-.thumbnail:hover {
-    border: 2px solid #f1f1f1;
+.thumbnail-info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+    z-index: 10;
+}
+
+.thumbnail-info::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.thumbnail-frame {
+    border: 5px solid #fff;
+    box-sizing: border-box;
 }

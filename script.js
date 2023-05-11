@@ -86,6 +86,7 @@ function createThumbnails() {
             class: 'thumbnail-info',
             text: `${imageData.title}: ${imageData.description}`,
             css: {
+                position: 'absolute',
                 display: 'none'
             }
         });
@@ -96,8 +97,12 @@ function createThumbnails() {
             loadPhoto(currentPhoto);
         });
 
-        thumbnail.on('mouseover', () => {
-            thumbnailInfo.css('display', 'block');
+        thumbnail.on('mousemove', (event) => {
+            thumbnailInfo.css({
+                display: 'block',
+                top: event.pageY - 40, 
+                left: event.pageX - thumbnailInfo.width() / 2 
+            });
         });
 
         thumbnail.on('mouseout', () => {

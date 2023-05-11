@@ -7,43 +7,43 @@ for(i = 0; i < thumbnails.length; i++) {
 let imagesData = [
     {
         photo: "images/AdobeStock_01.jpeg",
-        title: "My title 1",
-        description: "What happened here, why is this a very nice image 1"
+        title: "Almost",
+        description: "After the picture i fellt into the water"
     },
     {
         photo: "images/AdobeStock_02.jpeg",
-        title: "My title 2",
-        description: "What happened here, why is this a very nice image 2"
+        title: "DJ",
+        description: "Coding is like party all day isn't it?"
     },
     {
         photo: "images/AdobeStock_03.jpeg",
-        title: "My title 3",
-        description: "What happened here, why is this a very nice image 3"
+        title: "Seeds",
+        description: "Every line written is like a seed planted"
     },
     {
         photo: "images/AdobeStock_04.jpeg",
-        title: "My title 4",
-        description: "What happened here, why is this a very nice image 4"
+        title: "Some rest",
+        description: "Sometime everyone needs a vacation"
     },
     {
         photo: "images/AdobeStock_05.jpeg",
-        title: "My title 5",
-        description: "What happened here, why is this a very nice image 5"
+        title: "Long road",
+        description: "Coding seems to be a long journey.."
     },
     {
         photo: "images/AdobeStock_06.jpeg",
-        title: "My title 6",
-        description: "What happened here, why is this a very nice image 6"
+        title: "Nature",
+        description: "There is always a way"
     },
     {
         photo: "images/AdobeStock_07.jpeg",
-        title: "My title 7",
-        description: "What happened here, why is this a very nice image 7"
+        title: "Yoga",
+        description: "Recharge yourself is important"
     },
     {
         photo: "images/AdobeStock_08.jpeg",
-        title: "My title 8",
-        description: "What happened here, why is this a very nice image 8"
+        title: "Keep research",
+        description: "Keep research to be as up to date as possible"
     }
 ];
 

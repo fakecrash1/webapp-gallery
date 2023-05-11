@@ -47,4 +47,28 @@ let imagesData = [
     }
 ];
 
-$('#photo').attr('src', data.photo);
+let currentPhoto = 0;
+
+function loadPhoto(photoNumber) {
+    $('#photo').attr('src', imagesData[photoNumber].photo);
+    $('#photo-title').text(imagesData[photoNumber].title);
+    $('#photo-description').text(imagesData[photoNumber].description);
+}
+
+loadPhoto(currentPhoto);
+
+$('#right-arrow').click(() => {
+    currentPhoto++;
+    if (currentPhoto >= imagesData.length) {
+    currentPhoto = 0;
+    }
+    loadPhoto(currentPhoto);
+});
+
+$('#left-arrow').click(() => {
+    currentPhoto--;
+    if (currentPhoto < 0) {
+    currentPhoto = imagesData.length - 1;
+    }
+    loadPhoto(currentPhoto);
+});

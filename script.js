@@ -49,9 +49,13 @@ function loadPhoto(photoNumber) {
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-description').text(imagesData[photoNumber].description);
-    $('.thumbnail').removeClass('active');
-    $(`.thumbnail[data-number="${photoNumber}"]`).addClass('active');
+
+    // Remove the thumbnail-frame class from all thumbnails
+    $('.thumbnail').removeClass('thumbnail-frame');
+    // Add the thumbnail-frame class to the active thumbnail
+    $(`.thumbnail[data-number=${photoNumber}]`).addClass('thumbnail-frame');
 }
+
 
 loadPhoto(currentPhoto);
 
@@ -81,6 +85,11 @@ function createThumbnails() {
             alt: `Thumbnail ${index + 1}`,
             'data-number': index
         });
+
+        // Add the thumbnail-frame class to the first thumbnail
+        if (index === 0) {
+            thumbnail.addClass('thumbnail-frame');
+        }
 
         const thumbnailInfo = $('<div>', {
             class: 'thumbnail-info',
